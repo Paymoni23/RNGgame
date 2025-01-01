@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Poker - RNG Gaming Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <button class="return-home" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i> Return Home
+                </button>
+                <div class="logo">RNG Paradise</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#games">Games</a>
+                <a href="#leaderboard">Leaderboard</a>
+                <a href="#rewards">Rewards</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="poker-container">
+        <div class="poker-game">
+            <div class="player-cards">
+                <h3>Your Hand</h3>
+                <div class="cards" id="playerCards"></div>
+            </div>
+
+            <div class="community-cards">
+                <h3>Community Cards</h3>
+                <div class="cards" id="communityCards"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="dealButton" class="game-button">Deal New Hand</button>
+            </div>
+
+            <div class="game-info">
+                <div id="result" class="result"></div>
+                <div id="handRank" class="hand-rank"></div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Hands Played:</span>
+                    <span id="handsPlayed">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Best Hand:</span>
+                    <span id="bestHand">-</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="fairness">
+                <h4>Certified Fair Gaming</h4>
+                <p>All games use verified RNG technology</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="poker.js"></script>
+</body>
+</html>

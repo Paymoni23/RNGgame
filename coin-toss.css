@@ -1,0 +1,195 @@
+/* More specific selectors */
+.coin-toss-game .controls .game-button {
+    padding: 12px 24px;
+    margin: 5px;
+    border: 2px solid #2196F3;
+    border-radius: 25px;
+    background-color: white;
+    color: #2196F3;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coin-toss-game .controls .game-button:hover {
+    background-color: #2196F3;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.coin-toss-game .controls .game-button:active {
+    transform: translateY(1px);
+}
+
+.coin-toss-game .controls .game-button.selected {
+    background-color: #2196F3;
+    color: white;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+}
+
+.coin-toss-game .controls .game-button:disabled {
+    background-color: #cccccc;
+    border-color: #999999;
+    color: #666666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Controls container with new layout */
+.coin-toss-game .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 20px;
+}
+
+/* Toss Coin button container */
+.coin-toss-game .controls .toss-section {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Enhanced Toss Coin button */
+.coin-toss-game .controls #tossButton {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border: none;
+    color: white;
+    font-size: 1.4em;
+    padding: 20px 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative elements for Toss Coin button */
+.coin-toss-game .controls #tossButton::before {
+    content: '★';
+    position: absolute;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.coin-toss-game .controls #tossButton::after {
+    content: '★';
+    position: absolute;
+    right: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hover effect for Toss Coin button */
+.coin-toss-game .controls #tossButton:hover {
+    background: linear-gradient(45deg, #FFA500, #FFD700);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Prediction buttons container */
+.coin-toss-game .controls .prediction-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 2px solid rgba(33, 150, 243, 0.2);
+}
+
+/* Prediction buttons */
+.coin-toss-game .controls .game-button:not(#tossButton) {
+    padding: 12px 24px;
+    margin: 5px;
+    border: 2px solid #2196F3;
+    border-radius: 25px;
+    background-color: #2196F3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover state */
+.coin-toss-game .controls .game-button:not(#tossButton):hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+/* Selected state */
+.coin-toss-game .controls .game-button.selected {
+    background-color: #1565C0;
+    color: white;
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.6);
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.coin-toss-game .controls .game-button:disabled {
+    background-color: #cccccc;
+    border-color: #999999;
+    color: #666666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Add shimmer animation to Toss Coin button */
+@keyframes shimmer {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+
+.coin-toss-game .controls #tossButton {
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite linear;
+}
+
+/* Add checkmark icon to selected button */
+.coin-toss-game .controls .game-button.selected::after {
+    content: '✓';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #4CAF50;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border: 2px solid white;
+}
+
+/* Add text indication */
+.coin-toss-game .controls .game-button.selected::before {
+    content: 'Selected';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+/* Pulse animation for selected button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Unselected prediction buttons hover state */
+.coin-toss-game .controls .game-button:not(.selected):hover {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+    transform: translateY(-2px);
+} 

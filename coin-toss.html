@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss - RNG Gaming Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="coin-toss.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <button class="return-home" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i> Return Home
+                </button>
+                <div class="logo">RNG Paradise</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#games">Games</a>
+                <a href="#leaderboard">Leaderboard</a>
+                <a href="#rewards">Rewards</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="coin-toss-container">
+        <h1>Coin Toss</h1>
+        <div class="balance-info">
+            <div class="balance">Balance: <span id="balance">1000</span></div>
+            <div class="bet-controls">
+                <button id="decreaseBet" class="bet-btn">-</button>
+                <span>Bet: <span id="betAmount">10</span></span>
+                <button id="increaseBet" class="bet-btn">+</button>
+            </div>
+        </div>
+
+        <div class="coin-toss-game">
+            <div class="coin" id="coin">
+                <div class="coin-face heads">H</div>
+                <div class="coin-face tails">T</div>
+            </div>
+            <div class="controls">
+                <div class="toss-section">
+                    <button id="tossButton" class="game-button">Toss Coin</button>
+                </div>
+                <div class="prediction-buttons">
+                    <button id="predictHeads" class="game-button">Predict Heads</button>
+                    <button id="predictTails" class="game-button">Predict Tails</button>
+                </div>
+            </div>
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Streak:</span>
+                <span id="streak">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Games Played:</span>
+                <span id="gamesPlayed">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Win Rate:</span>
+                <span id="winRate">0%</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="fairness">
+                <h4>Certified Fair Gaming</h4>
+                <p>All games use verified RNG technology</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="coin-toss.js"></script>
+</body>
+</html> 

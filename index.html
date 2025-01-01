@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNG Gaming Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RNG Paradise</div>
+            <div class="nav-links">
+                <a href="#games">Games</a>
+                <a href="#leaderboard">Leaderboard</a>
+                <a href="#rewards">Rewards</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to RNG Paradise</h1>
+        <p>Experience fair and exciting games of chance!</p>
+        <a href="#games" class="cta-btn">Play Now</a>
+    </section>
+
+    <section id="games" class="games-grid">
+        <div class="game-card" onclick="window.location.href='dice.html'">
+            <i class="fas fa-dice"></i>
+            <h3>Dice Roll</h3>
+            <p>Test your luck with our fair dice!</p>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='poker.html'">
+            <i class="fas fa-crown"></i>
+            <h3>Interactive Poker</h3>
+            <p>Play poker with a unique reveal mechanic!</p>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='slots.html'">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Number Slots</h3>
+            <p>Spin to match numbers and win big!</p>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='coin-toss.html'">
+            <i class="fas fa-coins"></i>
+            <h3>Coin Toss</h3>
+            <p>Predict the outcome and win big!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="fairness">
+                <h4>Certified Fair Gaming</h4>
+                <p>All games use verified RNG technology</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
